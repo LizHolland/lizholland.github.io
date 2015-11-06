@@ -23,7 +23,7 @@
 
 function setup() {
     
-    createCanvas(windowWidth, windowHeight);
+    createCanvas(displayWidth, displayHeight);
 }
 
 function draw() {
@@ -39,14 +39,32 @@ function draw() {
     strokeWeight(5);
     stroke("#F08080");
     ellipse(45, 536, 826, 226);
+    var y, b, p;
+  r = random(255);
+  g = random(255);
+  b = random(255);
+  
+  strokeWeight(2);
+  stroke(r, g, b);
+  fill(r, g, b, 127);
+  
     triangle(120,230,445,324,212,389);
     fill("#6495ED")
-quad(538, 31, 386, 320, 369, 363, 930, 74);
+    quad(538, 31, 386, 320, 369, 363, 930, 74);
     triangle(120,230,445,324,212,389);
     noStroke();
     fill("#F08080");
-    ellipse(mouseX,mouseY,26,756);
+    ellipse(mouseX,mouseY,45,256);
     
+   // var y, b, p;
+  //r = random(255);
+  //g = random(255);
+  //b = random(255);
+  
+  //strokeWeight(2);
+ // stroke(r, g, b);
+  //fill(r, g, b, 127);
+  
     //triangle(pmouseX,pmouseY,130,35,324,212,389);
     triangle(330,130,35,324,212,389);
 
@@ -55,16 +73,30 @@ quad(538, 31, 386, 320, 369, 363, 930, 74);
     ellipse(566, 246, 155, 575);
   else
     rect(30, 20, 95, 55);
+    
    blendMode(LIGHTEST);
+   
+   var noiseScale=0.02;
+
+
+  
+  for (var x=0; x < height; x++) {
+    var noiseVal = noise((mouseX+x)*noiseScale, mouseY*noiseScale);
+    stroke(noiseVal*255);
+    line(x, mouseY+noiseVal*23, x, width);
+  
+}
+   
+   
   p1 = {x: 457, y: 309}, p2 = {x: 34, y: 23}
 p3 = {x: 233, y: 330}, p4 = {x: 40, y: 500}
 fill("#E9967A");
 stroke("#48D1CC");
-curve(p1.x, p1.y, p1.x, p1.y, p2.x, p2.y, p3.x, p3.y);
+curve(pmouseX,pmouseY, p1.x, p1.y, p2.x, p2.y, p3.x, p3.y);
 stroke("#FAFAD2");
-curve(p1.x, p1.y, p2.x, p2.y, p3.x, p3.y, p4.x, p4.y);
+curve(pmouseX,pmouseY, p2.x, p2.y, p3.x, p3.y, p4.x, p4.y);
 stroke("#FFB6C1");
-curve(p2.x, p2.y, p3.x, p3.y, p4.x, p4.y, p4.x, p4.y);
+curve(pmouseX,pmouseY, p3.x, p3.y, p4.x, p4.y, p4.x, p4.y);
 push();
 fill("#7FFF00");
 strokeWeight(1)
@@ -74,9 +106,59 @@ fill("#6495ED")
 pop();
 quad(538, 31, 386, 320, 369, 363, 930, 74);
 fill("#00BFFF")
-line(pmouseX,pmouseY,545,88);
 
- 
+var xoff = 0.0;
+
+  xoff = xoff + .01;
+  var n = noise(xoff) * width;
+  line(n, 0, n, height);
+
+p7 = {x: 869, y: 434}, p8 = {x: 874, y: 263}
+p5 = {x: 1084, y: 625}, p6 = {x: 817, y: 648}
+fill("#00FFFF");
+stroke("#0000FF");
+curve(p5.x, p5.x);
+curve(pmouseX,pmouseY, p5.x, p5.y, p6.x, p6.y, p7.x, p7.y);
+stroke("#FAFAD2");
+curve(pmouseX,pmouseY, p6.x, p6.y, p7.x, p7.y, p8.x, p8.y)
+stroke("#5F9EA0")
+curve(pmouseX,pmouseY, p7.x, p7.y, p8.x, p8.y, p8.x, p8.y)
+
+p11 = {x: 1069, y: 534}, p10 = {x: 1074, y: 283}
+p9 = {x: 1284, y: 645}, p12 = {x: 1017, y: 668}
+fill("#8A2BE2");
+stroke("#8A2BE2");
+curve(p11.x, p11.x);
+curve(pmouseX,pmouseY, p11.x, p11.y, p10.x, p10.y, p7.x, p7.y);
+stroke("#FAFAD2");
+curve(pmouseX,pmouseY, p10.x, p10.y, p12.x, p12.y, p9.x, p9.y)
+stroke("#5F9EA0")
+curve(pmouseX,pmouseY, p12.x, p12.y, p9.x, p9.y, p9.x, p9.y)
+
+p11 = {x: 69, y: 54}, p10 = {x: 274, y: 83}
+p9 = {x: 84, y: 64}, p12 = {x: 217, y: 58}
+fill("#BA55D3");
+stroke("#BA55D3");
+curve(p11.x, p11.x);
+curve(pmouseX,pmouseY, p11.x, p11.y, p10.x, p10.y, p7.x, p7.y);
+stroke("#BA55D3");
+curve(pmouseX,pmouseY, p10.x, p10.y, p12.x, p12.y, p9.x, p9.y)
+stroke("#BA55D3")
+curve(pmouseX,pmouseY, p12.x, p12.y, p9.x, p9.y, p9.x, p9.y)
+
+
+p13 = {x: 56, y: 12}, p14 = {x: 74, y: 73}
+p15 = {x: 124, y: 84}, p16 = {x: 117, y: 98}
+fill("#C71585");
+stroke("#C71585");
+curve(p13.x, p13.x);
+curve(pmouseX,pmouseY, p13.x, p13.y, p14.x, p14.y, p7.x, p7.y);
+stroke("#C71585");
+curve(pmouseX,pmouseY, p14.x, p14.y, p15.x, p15.y, p16.x, p16.y)
+stroke("#C71585")
+curve(pmouseX,pmouseY, p15.x, p15.y, p16.x, p16.y, p16.x, p16.y)
+
+
 
 
 }
