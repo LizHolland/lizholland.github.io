@@ -1,0 +1,49 @@
+body{ background:PINK;
+    
+}
+
+
+h1{
+    font-family:"Yuanti SC";
+    font-style:italic;
+    font-size:50px;
+    color:purple;
+    text-align:center;
+    margin-top: 100px;
+    
+}
+
+.deinemuddda{
+    font-family:"Bondoni 72";
+    font-size:50px;
+    color:violet;
+    text-align:center;
+}
+
+a{
+    text-decoration:none;
+}
+
+a:hover{
+    color:Powderblue;
+
+}
+
+hr{
+    color:blue;
+    border:0;
+    width:100%;
+    background-color:#FF1493;
+    height:5px;
+     
+}
+
+ .curly{
+    font-family:"Zapfino";
+    font-style:italic;
+    text-decoration:none;
+    text-align:center;
+    margin-bottom:50px;
+    
+     
+ }

@@ -169,10 +169,7 @@ var noiseScale=0.01;
     line(x, mouseY+noiseVal*23, x, height);
     
     
-    
   }
- 
-   
 
 }
 

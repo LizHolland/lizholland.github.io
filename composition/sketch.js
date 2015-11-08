@@ -1,27 +1,3 @@
-//function setup(){
-    //creatCanvas(windowWidth, windowWeight);
-//}
-
-//function draw() {
-
-	// place your drawing code here
-//	background("grey")
-//fill(0,233,56);
-	//noFill();
-//	triangle(40,40,100,100,20,120);
-//	fill(120,34,25);
-//	stroke("green");
-	//line(0,0,width/2,height/2);
-	//noFill();
-	//strokeWeight(10);
-//	ellipse(100,100,40,40);
-    //point(200,100);
-   // fill(120,34,234);
-   // rect(200,200,70,70,20);
-   // quad(100,100,150,170,200,270,120,180);
-//}
-
-
 function setup() {
   
   
@@ -195,6 +171,4 @@ var noiseScale=0.01;
     
   }
  
-   
-
 }
